@@ -1,0 +1,165 @@
+/* css reset */
+*{box-sizing: border-box;}
+*:before, *:after{box-sizing: border-box;}
+*{margin: 0; padding: 0}
+ul,ol{list-style: none;}
+a{color: inherit; text-decoration: none;}
+/* 设置image标签的最大宽、高不能超过副容器宽高 */
+img{max-width: 100%; max-height: 100%;}
+
+/* style */
+body {
+    background: #eee;
+}
+
+.globalHeader {
+    /* 这就居中了！！！ */
+    margin: 20px;
+}
+@media (min-width: 500px) {
+    .globalHeader{
+    }
+}
+
+.searchForm{
+    display: flex;
+    justify-content: space-between;
+}
+@media(min-width: 500px){
+    .searchForm{
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.searchForm > input{
+    width: 100%;
+    /* 让输入框与按钮分开点距离 */
+    margin-right: 10px;
+    height: 40px;
+    /* 让输入框与文字分开点距离 */
+    padding: 0 10px;
+    border:1px solid #ddd;
+    border-radius: 4px;
+}
+.searchForm > button{
+    background: #0282b9;
+    white-space: nowrap;
+    padding: 0 28px;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+.globalMain {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.siteList{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (min-width: 500px) {
+    .siteList{
+        margin-right: -25px;
+        margin-left: 0;
+        /*默认样式*/
+        justify-content: flex-start;
+    }
+}
+
+.siteList > li {
+    margin-bottom: 10px;
+}
+@media (min-width: 500px) {
+    .siteList > li{
+        margin-right: 25px;
+    }
+}
+
+.siteList .site{
+    width: 160px;
+
+    /* 让里面的元素居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    padding: 20px 0;
+    position: relative;
+    /*显示手型*/
+    cursor: pointer;
+}
+
+.siteList .site > .logo{
+    height: 64px;
+    width: 64px;
+    /* 让logo里面文字居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 64px;
+}
+
+.siteList .site > .link {
+    font-size: 14px;
+    margin-top:  4px;
+}
+
+.siteList .site > .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    /*显示手型*/
+    cursor: default;
+}
+.siteList .site:hover > .close {
+    display: block;
+}
+
+.siteList .addButton{
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    padding: 20px 0;
+}
+
+.siteList .addButton .icon{
+    width: 56px;
+    height: 56px;
+}
+
+.siteList .addButton .icon-wrapper{
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+}
